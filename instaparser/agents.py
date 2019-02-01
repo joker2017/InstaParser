@@ -304,7 +304,7 @@ class Agent:
             settings["params"] = {"query_hash": query_hash}
         else:
             settings["params"]["query_hash"] = query_hash
-
+        print("rhx_gis_2", self._rhx_gis)
         settings["params"]["variables"] = variables
         gis = "%s:%s" % (self._rhx_gis, variables)
         if not "headers" in settings:
