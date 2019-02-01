@@ -312,9 +312,9 @@ class Agent:
         else:
             settings["headers"]["X-Instagram-GIS"] = hashlib.md5(gis.encode("utf-8")).hexdigest()
         settings["headers"]["X-Requested-With"] = "XMLHttpRequest"
-
+        print("**settings", settings)
         try:
-            print("**settings", **settings)
+            
             response = self._get_request("https://www.instagram.com/graphql/query/", **settings)
             response.raise_for_status()
             return response
