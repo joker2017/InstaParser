@@ -314,6 +314,7 @@ class Agent:
         settings["headers"]["X-Requested-With"] = "XMLHttpRequest"
 
         try:
+            print("**settings", **settings)
             response = self._get_request("https://www.instagram.com/graphql/query/", **settings)
             response.raise_for_status()
             return response
