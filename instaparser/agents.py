@@ -113,7 +113,8 @@ class Agent:
             else:
                 data["name"] = "id"
                 data["name_value"] = obj.id
-
+            print("settings", settings)
+            print("variables_string", variables_string) 
             response = self._graphql_request(
                 query_hash=obj._media_query_hash,
                 variables=variables_string.format(**data),
