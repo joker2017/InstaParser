@@ -40,6 +40,7 @@ class Agent:
             )
             data = json.loads(match.group(1))
             self._rhx_gis = data["rhx_gis"]
+            print("rhx_gis", data["rhx_gis"])
             self._csrf_token = data["config"]["csrf_token"]
             
             if obj is None:
