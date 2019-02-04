@@ -351,6 +351,8 @@ class Agent:
 
     def _get_request(self, *args, **kwargs):
         try:
+            print("args", args)
+            print("kwargs", kwargs)
             response = self._session.get(*args, **kwargs)
             response.raise_for_status()
             return response
